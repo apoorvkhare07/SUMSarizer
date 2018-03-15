@@ -33,6 +33,7 @@ from werkzeug import secure_filename
 
 app = Flask(__name__)
 app.config.from_object(os.environ.get('APP_SETTINGS'))
+app.config['SECURITY_PASSWORD_SALT'] = '$2a$16$PnnIgfMwkOjGX4SkHqSOPO'
 # app.config['PROFILE'] = True
 # app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])
 db = SQLAlchemy(app)
