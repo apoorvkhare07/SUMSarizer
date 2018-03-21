@@ -28,7 +28,7 @@
           <li><a href="{{ url_for('security.logout') }}">Logout</a></li>
         {% else %}
           <li {% if 'login' in request.endpoint %}class=""{% endif %}><a href="{{ url_for('security.login') }}">Login</a></li>
-					<li {% if 'register' in request.endpoint %}class=""{% endif %}><a class="btn btn-success" href="{{ url_for('security.register') }}">Register</a></li>
+					<li {% if 'register' in request.endpoint %}class=""{% endif %}><a class="btn btn-success" href="{{ url_for('security.login') }}">Register</a></li>
         {% endif %}
       </ul>
       <h3 class="text-muted"></h3>
